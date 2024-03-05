@@ -1,12 +1,11 @@
 package mate.academy
 
 fun getMiddleString(originalString: String): String {
-    val halfLength: Int = originalString.length
+    val length: Int = originalString.length
     val result = when {
-        halfLength == 0 ->  ""
-        halfLength == 2 -> originalString
-        halfLength % 2 == 0 -> originalString.substring(halfLength / 2 - 1, halfLength / 2 + 1)
-        else -> originalString[halfLength / 2].toString()
+        length <= 2 -> originalString
+        length % 2 == 0 -> originalString.substring(length / 2 - 1, length / 2 + 1)
+        else -> originalString[length / 2].toString()
     }
     return result
 }
