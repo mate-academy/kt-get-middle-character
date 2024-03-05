@@ -1,12 +1,12 @@
 package mate.academy
 
 fun getMiddleString(originalString: String): String {
-    if (originalString.length == 0) {
-        return ""
-    }
-    if (originalString.length % 2 == 0) {
-        return originalString[originalString.length / 2 - 1] + originalString[originalString.length / 2].toString()
+    val middleIndex = originalString.length / 2
+    return if (originalString.isEmpty()) {
+        ""
+    } else if (originalString.length % 2 == 0) {
+        originalString.substring(middleIndex - 1, middleIndex + 1)
     } else {
-        return originalString[originalString.length / 2].toString()
+        originalString[middleIndex].toString()
     }
 }
