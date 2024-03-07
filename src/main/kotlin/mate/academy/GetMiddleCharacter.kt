@@ -9,7 +9,7 @@ fun getMiddleString(originalString: String): String {
         return ""
     }
     return if (originalString.length % 2 == 0) {
-        originalString[middleString - 1].toString() + originalString[middleString].toString()
+        originalString.substring(middleString - 1, middleString + 1)
     } else {
         originalString[middleString].toString()
     }
