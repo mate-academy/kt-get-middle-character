@@ -5,6 +5,6 @@ fun getMiddleString(originalString: String): String {
     return when {
         length == 0 -> ""
         length % 2 == 0 -> originalString.substring(length / 2 - 1, length / 2 + 1)
-        else -> originalString[length / 2].toString()
+        else -> originalString.substring(length / 2, length / 2 + 1)
     }
 }
