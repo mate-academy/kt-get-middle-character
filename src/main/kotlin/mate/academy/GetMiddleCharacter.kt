@@ -8,3 +8,4 @@ fun getMiddleString(originalString: String): String {
         else -> originalString.substring(length / 2, length / 2 + 1)
     }
 }
+
