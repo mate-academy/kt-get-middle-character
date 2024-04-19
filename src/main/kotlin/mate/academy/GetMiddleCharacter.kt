@@ -5,7 +5,9 @@ package mate.academy
 
 fun getMiddleString(originalString: String): String {
     val size = originalString.length
+    val toReturn : String
     if (size < 2) return originalString
-    if (size % 2 == 0) return originalString.slice(size / 2 -1..size/2)
-    return originalString.get((size + 1) / 2).toString()
+    if (size % 2 == 0) toReturn = originalString.slice(size / 2 -1..size/2)
+    else toReturn = originalString.get((size + 1) / 2).toString()
+    return toReturn
 }
