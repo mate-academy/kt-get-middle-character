@@ -11,8 +11,6 @@ fun getMiddleString(originalString: String): String {
     if (length == 0) {
         return ""
     }
-    if (length % TWO != 0) {
-        return originalString[length / TWO].toString()
-    }
-    return originalString.substring(length / TWO - ONE, length / TWO + ONE)
+    return if (length % TWO == 0) originalString.substring(length / TWO - ONE, length / TWO + ONE)
+    else originalString[length / TWO].toString()
 }
