@@ -3,7 +3,7 @@ const val NUMBER_TWO = 2
 // implement the `getMiddleString()` function, which takes a string
 // and returns middle character (or characters) as a string
 
-fun getMiddleString2(originalString: String): String {
+fun getMiddleString(originalString: String): String {
     val lengthStr = originalString.length
     val middle = lengthStr / NUMBER_TWO
     return when {
