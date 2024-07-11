@@ -4,5 +4,10 @@ package mate.academy
 // and returns middle character (or characters) as a string
 
 fun getMiddleString(originalString: String): String {
-    return ""
+    val size = originalString.length
+    return when {
+        size == 0 -> originalString
+        size % 2 == 0 -> originalString.substring(size / 2 - 1, size / 2 + 1)
+        else -> originalString.substring(size / 2, size / 2 + 1)
+    }
 }
