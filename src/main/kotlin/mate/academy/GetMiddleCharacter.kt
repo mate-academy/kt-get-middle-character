@@ -12,10 +12,6 @@ fun getMiddleString(originalString: String): String {
         return ""
     }
 
-    if (originalString.length == ONE) {
-        return originalString
-    }
-
     var middleIndex = originalString.length / TWO
 
     return if (originalString.length % TWO == ZERO) originalString.substring(middleIndex - ONE, middleIndex + ONE)
