@@ -9,8 +9,6 @@ fun getMiddleString(originalString: String): String {
         return ""
     }
     val middle = originalString.length / 2
-    if (originalString.length % 2 == 0) {
-        return originalString[middle - 1].toString() + originalString[middle].toString()
-    }
-    return originalString[middle].toString()
+    return if (originalString.length % 2 == 0) originalString[middle - 1].toString() + originalString[middle].toString()
+    else originalString[middle].toString()
 }
