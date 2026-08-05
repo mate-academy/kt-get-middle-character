@@ -4,5 +4,5 @@ package mate.academy
 // and returns middle character (or characters) as a string
 
 fun getMiddleString(originalString: String): String {
-    return ""
+    return originalString.drop((originalString.length - 1) / 2).take(2 - originalString.length % 2)
 }
