@@ -1,8 +1,15 @@
 package mate.academy
 
-// implement the `getMiddleString()` function, which takes a string
-// and returns middle character (or characters) as a string
+const val HALF: Int = 2;
+const val ONE: Int = 1
 
 fun getMiddleString(originalString: String): String {
-    return ""
+    if (originalString.length < 2) {
+        return originalString
+    }
+    val mid: String = originalString
+        .substring(originalString.length / HALF, originalString.length / HALF + ONE)
+    val middle: String = originalString
+        .substring(originalString.length / HALF - ONE, originalString.length / HALF + ONE)
+    return if (originalString.length % HALF == ONE) mid else middle
 }
